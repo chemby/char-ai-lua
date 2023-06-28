@@ -179,14 +179,13 @@ function CharacterAI:HTTPRequest(url: string, metodo: string, cuerpo: any, OnlyB
 	end;
 
 	print(err['StatusCode'])
-	print(err['StatusMessage'])
 	print("---------------")
 
 	for i,v in pairs(err) do
 		print(v)
 	end
 	
-	local String = 'Status Code: '..err['StatusCode']..'\n StatusMessage: '..err['StatusMessage']
+	local String = 'Status Code: '..err['StatusCode']
 	if (err['Body']) then
 		String = String..'\n Body: '..err['Body']
 	end
